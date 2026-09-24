@@ -148,9 +148,9 @@ ul,ol{margin:0;padding:0}
 .hero .contours{-webkit-mask-image:linear-gradient(100deg,rgba(0,0,0,.25) 10%,#000 75%);mask-image:linear-gradient(100deg,rgba(0,0,0,.25) 10%,#000 75%)}
 .hero .wrap{position:relative;width:100%;display:grid;grid-template-columns:minmax(0,8.4fr) minmax(0,3.6fr);column-gap:var(--s2);align-items:center;padding-top:var(--s4);padding-bottom:var(--s4)}
 .hero-meta{display:flex;justify-content:space-between;gap:var(--s1);font-size:15px;font-weight:500;color:var(--graphite)}
-.greeting{font-size:clamp(44px,6vw,118px);margin:0;padding:0;max-width:none}
+.greeting{font-size:clamp(44px,5.8vw,88px);margin:0;padding:0;max-width:none;overflow-wrap:break-word}
 .greeting > span{display:block}
-@media (min-width:821px){.greeting > span{white-space:nowrap}}
+@media (min-width:1180px){.greeting > span{white-space:nowrap}}
 .greeting .co{display:block}
 .hero-foot{display:block;padding-bottom:6px}
 .thesis{grid-column:1 / 6;font-size:clamp(18px,1.45vw,22px);line-height:1.32;font-weight:500;letter-spacing:-.012em;margin:0;max-width:30ch}
@@ -1914,6 +1914,26 @@ mark.hl{background:linear-gradient(transparent 58%,rgba(45,68,112,.2) 58%) no-re
 
 /* No paper texture anywhere */
 body::after{display:none !important}
+
+/* How I work: tabs across the top, a roomy panel below */
+@media (min-width:821px){
+  .hw{grid-template-columns:1fr !important;row-gap:28px}
+  .hw-tabs{grid-column:1 / -1 !important;display:grid !important;grid-template-columns:repeat(5,minmax(0,1fr)) !important;gap:0 !important;border-top:1.5px solid var(--ink)}
+  .hw-tabs li{border-right:1px solid var(--stone)}
+  .hw-tabs li:last-child{border-right:0}
+  .hw-tab{height:100%;display:flex !important;flex-direction:column;align-items:flex-start;gap:10px !important;padding:20px 22px 24px !important;border-bottom:0 !important}
+  .hw-tab::before{left:0 !important;right:0;top:-1.5px !important;bottom:auto !important;width:auto !important;height:3px !important;transform:scaleX(0) !important;transform-origin:0 50%}
+  .hw-tab.on::before{transform:scaleX(1) !important}
+  .hw-tab .hw-n{padding:0 !important}
+  .hw-tab .hw-l{font-size:clamp(15px,1.2vw,18px) !important;line-height:1.3}
+  .hw-tab .hw-bar{display:none !important}
+  .hw-stage{grid-column:1 / -1 !important;min-height:500px}
+  .hw-panel{grid-template-columns:minmax(0,5fr) minmax(0,6fr) !important;gap:clamp(40px,6vw,96px) !important;padding:clamp(40px,5vw,72px) !important;align-items:center}
+  .hw-copy p{font-size:18px !important;line-height:1.6 !important;max-width:46ch}
+  .hw-copy h3{margin-bottom:20px !important}
+  .viz{min-height:300px;padding:34px !important}
+}
+
 </style>
 </head>
 <body>
@@ -3298,7 +3318,7 @@ document.querySelectorAll(".flip").forEach(card => {
   } else {
     card.addEventListener("click", () => open(!card.classList.contains("open")));
   }
-  card.addEventListener("focus", () => open(true));
+  card.addEventListener("focus", () => { if (card.matches(":focus-visible")) open(true); });
   card.addEventListener("blur", () => { if (!card.matches(":hover")) open(false); });
   card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " "){ e.preventDefault(); open(!card.classList.contains("open")); } });
 });
