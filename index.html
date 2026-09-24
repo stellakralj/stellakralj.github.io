@@ -2580,14 +2580,14 @@ function renderHotel(p, next, snap){
         "It didn't fit the timeline, and guests spend money during the stay.",
         "Proposed focusing on the in-stay guest and argued for it until the PM and client agreed. One complete experience instead of three half-finished ones.",
         "A complete guest journey in the first release.",
-        `<div class="lifecycle"><div class="lc"><b>Before the stay</b><span>Future work</span></div><div class="lc on"><b>During the stay</b><span>This release</span></div><div class="lc"><b>After the stay</b><span>Future work</span></div></div>`)}
+        `<p class="dec-more">The brief covered the whole guest lifecycle: planning and booking before arrival, everything during the stay, and staying in touch afterwards. With a fixed deadline and many integrations still pending, doing all three would have meant doing each one badly. In the scoping workshops I showed where the stay itself carried the value, for guests and for the hotel's revenue, and proposed making it the whole first release. Before and after the stay were written down as future work, to be researched and scoped in a later phase, so nothing was lost, just sequenced.</p><div class="lifecycle"><div class="lc"><b>Before the stay</b><span>Future work</span></div><div class="lc on"><b>During the stay</b><span>This release</span></div><div class="lc"><b>After the stay</b><span>Future work</span></div></div>`)}
 
       ${decision(2, "Challenges instead of a mini-game",
         "A puzzle-style mini-game, to keep guests in the app for longer.",
         "Guests on holiday don't want a game. Time at the hotel earns money, time in the app doesn't.",
         "My own concept, Moments: stamps for dining, spa, experiences, the survey or skipping a room clean, traded for loyalty points. Approved and being built.",
         "The client's original idea, which took some convincing.",
-        `<div class="chips"><span>Venture outdoors</span><span>Wellness and spa</span><span>Dine with us</span><span>Share your thoughts</span><span>Go green: skip a room clean</span><span>A gift from the shop</span></div>
+        `<p class="dec-more">The original idea was a puzzle-style game to keep people in the app. But these guests are on holiday, and a game only competes with the pool. I looked at what the hotel actually wanted from engagement: more guests using its restaurants, spa and experiences, and more of them joining loyalty. Moments turns those into a collection. Each stamp is something that earns the hotel money or helps it run, including skipping a room clean, and the complete set is traded for loyalty points. Guests who aren't members are asked to join to keep them, so the feature grows the loyalty programme too.</p><div class="chips"><span>Venture outdoors</span><span>Wellness and spa</span><span>Dine with us</span><span>Share your thoughts</span><span>Go green: skip a room clean</span><span>A gift from the shop</span></div>
          <div class="phones story">
            ${phone(AM_IMG.partial, "Moments on the home screen, three of four collected", "<b>1</b> Collect along the way")}
            ${phone(AM_IMG.collected, "The completed collection with a claim button", "<b>2</b> Complete the set")}
@@ -2601,7 +2601,7 @@ function renderHotel(p, next, snap){
         "The AI is only as good as its data, and much of it was missing.",
         "Defined how it behaves: opens from anywhere, answers briefly, and always leads to real content. Developers built to those rules.",
         "The \u201cask it anything\u201d promise.",
-        `<div class="ai-block">
+        `<p class="dec-more">The client wanted an AI concierge at the centre of the app, but the proof of concept made its limits clear: the AI can only answer from the content and data behind it, and much of that wasn't connected yet. So I designed it as a guide rather than an oracle. It opens as a sheet from anywhere and knows which page it came from. Answers stay short and always point to real content, with cards and tappable options to narrow things down. Conversations are saved as sessions you can pick up later, and guests can switch between asking and browsing at any point. I wrote these rules into the designs, so the behaviour was specified rather than left to the model.</p><div class="ai-block">
            <ul class="rules">
              <li><b>Opens from anywhere</b><span>And adapts to the page it was opened from.</span></li>
              <li><b>Runs in sessions</b><span>Saved with a title, and resumable later.</span></li>
@@ -2620,7 +2620,7 @@ function renderHotel(p, next, snap){
         "Fixed screens would need a designer and developer for every new page.",
         "I designed every page as reusable blocks in Figma, so developers could build the CMS around them and the client can assemble pages for any property.",
         "Some visual freedom, for a system the client runs alone.",
-        `<div class="blocks-demo">
+        `<p class="dec-more">Every property has its own restaurants, programme and offers, in five languages, and the content changes all the time. Fixed screens would have meant a designer and a developer for every new page. Instead I designed a library of content blocks in Figma, heroes, copy, lists and galleries, each with notes on how it behaves and what content it takes. Developers built the CMS around them, and the client assembles pages for any property on their own.</p><div class="blocks-demo">
            <div class="bstack" aria-hidden="true">
              <div class="sb hero-b"><b>Hero</b><span>Photo, title, call to action</span></div>
              <div class="sb copy-b"><b>Copy</b><span>Heading and text</span></div>
@@ -2839,7 +2839,7 @@ function renderPact(p, next, snap){
         "Legal and tax complexity, pyramid-scheme optics, and unpredictable costs.",
         "One plan with a 30-day free trial, so people feel the value first. Later, a second path for business: gyms and studios buy seats in bulk, so their members get free access to their team and community.",
         "A growth idea the founder was excited about.",
-        `<div class="vs">
+        `<p class="dec-more">The founder's idea was to pay users for bringing in new members, a model borrowed from multi-level marketing. In the monetisation plan I assessed it honestly: it would reward recruiting rather than training, add payout, tax and legal complexity, read as a pyramid scheme, and make acquisition costs unpredictable. I recommended one simple subscription with a 30-day free trial and full access, so people feel the value before paying. It's also one rule to build instead of many premium flags. Later, a second path came in for businesses: gyms and studios buy seats in bulk, so their members get free access to their team and community.</p><div class="vs">
            <div class="vs-a"><p class="c3-k">Proposed</p><p class="vs-t">Pay users for recruiting</p><ul><li>Rewards recruiting, not training</li><li>Tax and legal overhead</li><li>Pyramid-scheme perception</li></ul></div>
            <div class="vs-b"><p class="c3-k">Recommended</p><p class="vs-t">Free for 30 days, then one plan</p><ul><li>Value first, then payment</li><li>Predictable revenue</li><li>Seats for gyms and studios</li></ul></div>
          </div>`)}
@@ -2849,7 +2849,7 @@ function renderPact(p, next, snap){
         "Other apps drown people in data that changes too slowly to motivate.",
         "One live score from 1 to 100, against your own baseline. It rises when you train and slips when you don't.",
         "The detailed stats many fitness apps lead with.",
-        `<div class="phones three-up">
+        `<p class="dec-more">Most fitness apps lead with performance data: pace, distance, heart rate zones. For the people this app is for, that data either discourages them or changes too slowly to keep them going. The whole product rests on one score from 1 to 100 that measures effort against your own baseline, built from effort, consistency, recovery and battles. It rises when you train and slips when you stop, so doing nothing is never neutral. A team's score is the average of its active members, and the feed deliberately hides pace and distance, so a beginner and an athlete can stand side by side.</p><div class="phones three-up">
            ${phone(PC.home, "Home with the personal score and stat widgets", "The score at the centre of home")}
            ${phone(PC.chart, "Daily breakdown of the score by effort, consistency, fitness and battles", "What moved it, day by day")}
            ${phone(PC.team, "Team overview with the team score", "Your team feels it")}
